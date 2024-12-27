@@ -4,84 +4,98 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
-.navbar .logo a {
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.nav-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nav-table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+.logo {
     color: #fff;
     font-size: 24px;
-    text-decoration: none;
     font-weight: bold;
 }
 .nav-links {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
 }
 
 .nav-links li {
-    padding: 10px;
+    margin: 0 15px;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #ff6347;
+    text-decoration: underline;
 }
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+.contact-btn {
+    background-color: #ff5722;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 5px;
+.contact-btn:hover {
+    background-color: #e64a19;
 }
-@media (max-width: 768px) {
+.hamburger {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+}
+@media screen and (max-width: 768px) {
+
     .nav-links {
         display: none;
+        width: 100%;
         flex-direction: column;
-        gap: 15px;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: #333;
-        width: 200px;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        margin-top: 10px;
     }
 
     .nav-links.active {
         display: flex;
     }
 
-    .menu-toggle {
-        display: flex;
+    .nav-links li {
+        margin: 10px 0;
     }
-}
-.nav-links {
-    transition: all 0.3s ease;
+    .hamburger {
+        display: block;
+        text-align: center;
+    }
+    .nav-table td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .contact-btn {
+        margin-top: 15px;
+    }
+    .links-cell {
+        display: none;
+    }
 }
